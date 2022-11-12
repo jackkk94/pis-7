@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon -L /src/index.js"
   },
   "type": "module",
   "dependencies": {

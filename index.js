@@ -15,7 +15,7 @@ const main = async () => {
   app.get('/', async (request, response) => {
     const userAgent = request.headers['user-agent'];
     const logs = await collection.find({}).toArray();
-    const counter = ++logs.length;ß
+    const counter = ++logs.length;
     await collection.insertOne({ id: counter, datetime: new Date(), client_info: userAgent });
     
     response.send(`<h2>Hello! I have been seen ${counter} times</h2>`);

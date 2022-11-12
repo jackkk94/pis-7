@@ -11,7 +11,7 @@ const main = async () => {
   await dbClient.connect();
   const db = dbClient.db(dbName);
   const collection = db.collection('logs');
-  console.log(await collection.find({}).toArray());
+
   app.get('/', async (request, response) => {
     const userAgent = request.headers['user-agent'];
     const logs = await collection.find({}).toArray();
